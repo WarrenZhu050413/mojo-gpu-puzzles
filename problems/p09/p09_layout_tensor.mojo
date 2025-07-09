@@ -29,7 +29,7 @@ fn pooling[
 
     if global_i < size:
         shared[global_i] = a[global_i]
-
+    barrier()
     if global_i == 0:
         output[0] = shared[0]
     elif global_i == 1:
